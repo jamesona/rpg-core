@@ -1,0 +1,23 @@
+{
+	"forceConsistentCasingInFileNames": true,
+	"noImplicitReturns": true,
+	"strict": true,
+	"noUnusedLocals": true,
+	"no-null-keyword": true,
+	"compileOnSave": true,
+	"compilerOptions": {
+		"outDir": "./dist",
+		"rootDir": "./src",
+		// "baseUrl": "src",
+		"sourceMap": true,
+		"declaration": false,
+		"moduleResolution": "node",
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"target": "es2017",
+		"typeRoots": [
+			"node_modules/@types"
+		],
+		"module": "commonjs"
+	}
+}

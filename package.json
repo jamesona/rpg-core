@@ -1,0 +1,21 @@
+{
+  "name": "rpg-core",
+  "version": "0.1.0",
+  "description": "base classes for rpg games",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npm run build && node ./dist/index.js",
+    "build": "tsc",
+    "test": "jest --coverage"
+  },
+  "author": "Jameson Aranda",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.3.3333"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.3.1",
+    "ts-jest": "^24.0.0"
+  }
+}
