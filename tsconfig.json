@@ -19,5 +19,11 @@
 			"node_modules/@types"
 		],
 		"module": "commonjs"
-	}
+	},
+	"include": [
+		"src/**/*"
+	],
+	"exclude": [
+		"src/**/*.spec.ts"
+	]
 }
