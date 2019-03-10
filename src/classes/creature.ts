@@ -1,16 +1,14 @@
 import { HasStats, StatMap } from "../interfaces/has-stats";
 import { FixedStats, VariableStats } from "../lib/stats";
 
-export class Creature implements HasStats<FixedStats, VariableStats>{
+export abstract class Creature implements HasStats<FixedStats, VariableStats>{
 	public readonly type: string
 	public readonly stats: StatMap<FixedStats, VariableStats>
 	
-	constructor(template: {
-		prototype: {
-			stats: StatMap<FixedStats, VariableStats>
-		}
+	constructor(implementor: new () => {
+		stats: StatMap<FixedStats, VariableStats>
 	}) {
-		Object.assign(this, template)
-		this.type = template.prototype.constructor.name
+		Object.assign(this, implementor)
+		this.type = implementor.name
 	}
 }
