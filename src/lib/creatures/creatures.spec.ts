@@ -1,5 +1,5 @@
 import * as Creatures from './'
-import { Creature } from '../creature';
+import { Creature } from "../../classes/creature";
 
 describe('all creatures', () => {
 	Object.keys(Creatures).forEach(name => {
@@ -17,12 +17,20 @@ describe('all creatures', () => {
 			expect(creature.name).toBe(name)
 		})
 
-		it('should have a static stats property', () => {
-			expect(creature).toHaveProperty('stats')
-		})
-
 		it('should be newable', () => {
 			expect(() => new creature()).not.toThrow()
+		})
+
+		describe('instances', () => {
+			const instance = new creature()
+
+			it('should have a species', () => {
+				expect(instance).toHaveProperty('species')
+			})
+
+			it('should have stats', () => {
+				expect(instance).toHaveProperty('stats')
+			})
 		})
 	})
 })

@@ -1,8 +1,8 @@
-import { Creature } from "classes/creature";
+import { Creature } from "../../classes/creature";
 import { Stats } from "lib/stats";
 
 
-export class Goblin implements Creature<Stats> {
+export class Goblin extends Creature<Stats> {
 	public species = 'Goblin'
 	public stats = {
 		STR: 5,
@@ -22,5 +22,7 @@ export class Goblin implements Creature<Stats> {
 		}
 	}
 
-	constructor() {}
+	constructor() {
+		super()
+	}
 }
