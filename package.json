@@ -2,12 +2,12 @@
   "name": "rpg-core",
   "version": "0.1.0",
   "description": "base classes for rpg games",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "start": "npm run build && node ./dist/index.js",
     "build": "tsc",
     "test": "jest --coverage",
-    "document": "typedoc --out docs src"
+    "document": "typedoc src"
   },
   "author": "Jameson Aranda",
   "license": "MIT",
