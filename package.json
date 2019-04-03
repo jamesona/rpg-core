@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npm run build && node ./dist/index.js",
     "build": "tsc",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "document": "typedoc --out docs src"
   },
   "author": "Jameson Aranda",
   "license": "MIT",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "jest": "^24.3.1",
-    "ts-jest": "^24.0.0"
+    "ts-jest": "^24.0.0",
+    "typedoc": "^0.14.2"
   }
 }
