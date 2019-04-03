@@ -7,7 +7,7 @@
     "start": "npm run build && node ./dist/index.js",
     "build": "tsc",
     "test": "jest --coverage",
-    "document": "typedoc src"
+    "document": "typedoc --exclude '**/*+(index|.spec|.e2e).ts' --excludeExternals src/classes src/interfaces src/types"
   },
   "author": "Jameson Aranda",
   "license": "MIT",

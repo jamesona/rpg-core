@@ -1,14 +1,20 @@
-import { HasStats, StatMap } from "../interfaces/has-stats";
-import { FixedStats, VariableStats } from "../lib/stats";
+import { StatMap } from "../interfaces/has-stats";
 
-export abstract class Creature implements HasStats<FixedStats, VariableStats>{
-	public readonly type: string
-	public readonly stats: StatMap<FixedStats, VariableStats>
-	
-	constructor(implementor: new () => {
-		stats: StatMap<FixedStats, VariableStats>
-	}) {
-		Object.assign(this, implementor)
-		this.type = implementor.name
+/**
+ * An abstract class defining the common properties of creature classes
+ */
+export abstract class Creature<Stats extends StatMap<any, any>> {
+	static isCreature(subject: object): subject is Creature<StatMap<any, any>> {
+		return subject instanceof Creature
 	}
+
+	/**
+	 * A string uniquely identifying the type of creature (goblin, rat, dwarf)
+	 */
+	public abstract readonly species: string
+
+	/**
+	 * An instance of  [[StatMap]]
+	 */
+	public abstract readonly stats: Stats
 }

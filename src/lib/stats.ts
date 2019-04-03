@@ -1,3 +1,5 @@
+import { StatMap } from "interfaces/has-stats";
+
 export const FixedStats = {
 	STR: 'strength',
 	DEX: 'dexterity',
@@ -21,3 +23,5 @@ export const Stats = {
 	...FixedStats,
 	...VariableStats
 }
+
+export type Stats = StatMap<FixedStats, VariableStats>

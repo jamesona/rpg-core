@@ -28,7 +28,7 @@
 		"src/**/*.spec.ts"
 	],
 	"typedocOptions": {
-		"mode": "modules",
+		"mode": "file",
 		"out": "docs"
 	}
 }
