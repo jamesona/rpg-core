@@ -1,4 +1,5 @@
-import { Effect, MagnitudeMap } from "classes";
+import { Effect } from 'classes'
+import { MagnitudeMap } from 'interfaces/magnitude-map'
 
 /**
  * Example

@@ -1,25 +1,17 @@
-type Modifier<T> = (subject: T) => T[keyof T]
-
-type ModifierMap<T> = {
-	[key in keyof T]?: Modifier<T>
-}
-
-export type MagnitudeMap<T> = {
-	[key in keyof T]?: number
-}
+import { ModifierMap } from 'interfaces/modifier-map'
 
 /**
  * Example
- * 
+ *
  * ```ts
  * interface HasHP {
  * 	HP: number
  * }
- * 
+ *
  * interface HasMP {
  * 	MP: number
  * }
- * 
+ *
  * class DamageHP extends Effect<HasHP> {
  * 	readonly description = 'reduce target HP by 10'
  * 	constructor() {
@@ -33,12 +25,12 @@ export type MagnitudeMap<T> = {
  * ```
  */
 export abstract class Effect<SubjectAttributes> {
-	description: string
+	public readonly description: string
 
 	constructor(public readonly modifiers: ModifierMap<SubjectAttributes>) {}
 
 	public apply(subject: SubjectAttributes) {
-		const difference = {...subject}
+		const difference = { ...subject }
 
 		Reflect.ownKeys(this.modifiers).forEach(attribute => {
 			const modifier = this.modifiers[attribute]

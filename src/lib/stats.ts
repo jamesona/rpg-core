@@ -1,4 +1,4 @@
-import { StatMap } from "interfaces/has-stats";
+import { StatMap } from 'interfaces/has-stats'
 
 export const FixedStats = {
 	STR: 'strength',

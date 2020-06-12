@@ -1,6 +1,5 @@
-import { Creature } from "../../classes/creature";
-import { Stats } from "lib/stats";
-
+import { Creature } from '../../classes/creature'
+import { Stats } from 'lib/stats'
 
 export class Goblin extends Creature<Stats> {
 	public species = 'Goblin'

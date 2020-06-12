@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Effect | rpg-core</title>
+	<title>HasInventory | rpg-core</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,46 +54,21 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="effect.html">Effect</a>
+					<a href="hasinventory.html">HasInventory</a>
 				</li>
 			</ul>
-			<h1>Class Effect&lt;SubjectAttributes&gt;</h1>
+			<h1>Interface HasInventory&lt;Item&gt;</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>Example</p>
-					</div>
-					<pre><code class="language-ts"><span class="hljs-keyword">interface</span> HasHP {
-    HP: <span class="hljs-built_in">number</span>
-}
-
-<span class="hljs-keyword">interface</span> HasMP {
-    MP: <span class="hljs-built_in">number</span>
-}
-
-<span class="hljs-keyword">class</span> DamageHP <span class="hljs-keyword">extends</span> Effect&lt;HasHP&gt; {
-    readonly description = <span class="hljs-string">'reduce target HP by 10'</span>
-    <span class="hljs-keyword">constructor</span>(<span class="hljs-params"></span>) {
-        <span class="hljs-keyword">super</span>({
-            HP: <span class="hljs-function"><span class="hljs-params">subject</span> =&gt;</span> subject.HP - <span class="hljs-keyword">this</span>.amount,
-            <span class="hljs-comment">// This line will produce an error, because MP is not in the HasHP type</span>
-            MP: <span class="hljs-function"><span class="hljs-params">subject</span> =&gt;</span> subject.MP - <span class="hljs-keyword">this</span>.amount
-        })
-    }
-}</code></pre>
-				</div>
-			</section>
 			<section class="tsd-panel tsd-type-parameters">
 				<h3>Type parameters</h3>
 				<ul class="tsd-type-parameters">
 					<li>
-						<h4>SubjectAttributes</h4>
+						<h4>Item</h4>
 					</li>
 				</ul>
 			</section>
@@ -101,7 +76,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Effect</span>
+						<span class="target">HasInventory</span>
 					</li>
 				</ul>
 			</section>
@@ -110,100 +85,25 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="effect.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="effect.html#description" class="tsd-kind-icon">description</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="effect.html#modifiers" class="tsd-kind-icon">modifiers</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="effect.html#apply" class="tsd-kind-icon">apply</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="hasinventory.html#inventory" class="tsd-kind-icon">inventory</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Effect<span class="tsd-signature-symbol">(</span>modifiers<span class="tsd-signature-symbol">: </span><a href="../globals.html#modifiermap" class="tsd-signature-type">ModifierMap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SubjectAttributes</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="effect.html" class="tsd-signature-type">Effect</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/jamesona/rpg-core/blob/2e64ea6/src/classes/effect.ts#L28">classes/effect.ts:28</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>modifiers: <a href="../globals.html#modifiermap" class="tsd-signature-type">ModifierMap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SubjectAttributes</span><span class="tsd-signature-symbol">&gt;</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="effect.html" class="tsd-signature-type">Effect</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="description" class="tsd-anchor"></a>
-					<h3>description</h3>
-					<div class="tsd-signature tsd-kind-icon">description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="inventory" class="tsd-anchor"></a>
+					<h3>inventory</h3>
+					<div class="tsd-signature tsd-kind-icon">inventory<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Item</span><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/jamesona/rpg-core/blob/2e64ea6/src/classes/effect.ts#L28">classes/effect.ts:28</a></li>
+							<li>Defined in interfaces/has-inventory.ts:2</li>
 						</ul>
 					</aside>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="modifiers" class="tsd-anchor"></a>
-					<h3>modifiers</h3>
-					<div class="tsd-signature tsd-kind-icon">modifiers<span class="tsd-signature-symbol">:</span> <a href="../globals.html#modifiermap" class="tsd-signature-type">ModifierMap</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">SubjectAttributes</span><span class="tsd-signature-symbol">&gt;</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in <a href="https://github.com/jamesona/rpg-core/blob/2e64ea6/src/classes/effect.ts#L30">classes/effect.ts:30</a></li>
-						</ul>
-					</aside>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="apply" class="tsd-anchor"></a>
-					<h3>apply</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">apply<span class="tsd-signature-symbol">(</span>subject<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SubjectAttributes</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">SubjectAttributes</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/jamesona/rpg-core/blob/2e64ea6/src/classes/effect.ts#L32">classes/effect.ts:32</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>subject: <span class="tsd-signature-type">SubjectAttributes</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">SubjectAttributes</span></h4>
-						</li>
-					</ul>
 				</section>
 			</section>
 		</div>
@@ -221,52 +121,43 @@
 						<a href="../enums/equipslots.html" class="tsd-kind-icon">Equip<wbr>Slots</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="consumableitem.html" class="tsd-kind-icon">Consumable<wbr>Item</a>
+						<a href="../classes/consumableitem.html" class="tsd-kind-icon">Consumable<wbr>Item</a>
 					</li>
 					<li class=" tsd-kind-class tsd-has-type-parameter">
-						<a href="creature.html" class="tsd-kind-icon">Creature</a>
+						<a href="../classes/creature.html" class="tsd-kind-icon">Creature</a>
+					</li>
+					<li class=" tsd-kind-class tsd-has-type-parameter">
+						<a href="../classes/effect.html" class="tsd-kind-icon">Effect</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/equippableitem.html" class="tsd-kind-icon">Equippable<wbr>Item</a>
+					</li>
+					<li class=" tsd-kind-class">
+						<a href="../classes/itembase.html" class="tsd-kind-icon">Item<wbr>Base</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="hasfixedstats.html" class="tsd-kind-icon">Has<wbr>Fixed<wbr>Stats</a>
 					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-has-type-parameter">
-						<a href="effect.html" class="tsd-kind-icon">Effect</a>
+					<li class="current tsd-kind-interface tsd-has-type-parameter">
+						<a href="hasinventory.html" class="tsd-kind-icon">Has<wbr>Inventory</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="effect.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="effect.html#description" class="tsd-kind-icon">description</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="effect.html#modifiers" class="tsd-kind-icon">modifiers</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="effect.html#apply" class="tsd-kind-icon">apply</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="hasinventory.html#inventory" class="tsd-kind-icon">inventory</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
-					<li class=" tsd-kind-class">
-						<a href="equippableitem.html" class="tsd-kind-icon">Equippable<wbr>Item</a>
-					</li>
-					<li class=" tsd-kind-class">
-						<a href="itembase.html" class="tsd-kind-icon">Item<wbr>Base</a>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="hasrangedstats.html" class="tsd-kind-icon">Has<wbr>Ranged<wbr>Stats</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/hasfixedstats.html" class="tsd-kind-icon">Has<wbr>Fixed<wbr>Stats</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/hasinventory.html" class="tsd-kind-icon">Has<wbr>Inventory</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/hasrangedstats.html" class="tsd-kind-icon">Has<wbr>Ranged<wbr>Stats</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="../interfaces/hasstats.html" class="tsd-kind-icon">Has<wbr>Stats</a>
+						<a href="hasstats.html" class="tsd-kind-icon">Has<wbr>Stats</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="../interfaces/rangedstat.html" class="tsd-kind-icon">Ranged<wbr>Stat</a>
+						<a href="rangedstat.html" class="tsd-kind-icon">Ranged<wbr>Stat</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-has-type-parameter">
 						<a href="../globals.html#allowkey" class="tsd-kind-icon">Allow<wbr>Key</a>

@@ -1,6 +1,6 @@
 /**
  * A typed assertion that an object contains keys of type T, referencing values of type V
- * 
+ *
  * ```typescript
  * const keyMapExample: KeyMap<{foo: any}, string> = {
  * 	foo: ''
@@ -11,7 +11,7 @@ export type KeyMap<T, V> = HasKeys<keyof T, V>
 
 /**
  * A typed assertion that an object contains keys in the literal string union K, referencing values of type V
- * 
+ *
  * ```typescript
  * const hasKeysExample: HasKey<'name'|'fizz', string> = {
  * 	name: 'ted',

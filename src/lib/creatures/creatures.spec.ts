@@ -1,5 +1,5 @@
 import * as Creatures from './'
-import { Creature } from "../../classes/creature";
+import { Creature } from '../../classes/creature'
 
 describe('all creatures', () => {
 	Object.keys(Creatures).forEach(name => {

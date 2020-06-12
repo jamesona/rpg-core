@@ -7,16 +7,22 @@
     "start": "npm run build && node ./dist/index.js",
     "build": "tsc",
     "test": "jest --coverage",
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
     "document": "typedoc --exclude '**/*+(index|.spec|.e2e).ts' --excludeExternals src/classes src/interfaces src/types"
   },
   "author": "Jameson Aranda",
   "license": "MIT",
   "dependencies": {
+    "@typescript-eslint/parser": "^1.12.0",
     "typescript": "^3.3.3333"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
     "jest": "^24.3.1",
+    "prettier": "^1.18.2",
     "ts-jest": "^24.0.0",
     "typedoc": "^0.14.2"
   }
